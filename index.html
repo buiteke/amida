@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>あみだくじツール</title>
+	<meta name="keywords" content="あみだくじ 阿弥陀籤">
+	<meta name="description" content="あみだくじツール">
+	<link rel="stylesheet" href="css/amida.css" media="all">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="js/amida.js"></script>
+	<script src="js/amida_gui.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+	<div class="row">
+		<div class="col col-md-offset-5">
+			<!-- ヘッダー -->	
+			<h1>あみだくじツール</h1>
+		</div>
+	</div>
+	
+	<br /><br /><!-- br 以外の方法でレイアウトしたい -->
+
+	<div class="row">
+		<div class="col col-md-6">	
+			<div class="inputs">
+				<!--<div>ゴール選択肢</div>-->
+				<div>
+					<!--<input class="form-control" placeholder="ゴール選択肢を入力してください" type="text" id="text_entry"></input>-->
+					<input placeholder="ゴール選択肢を入力してください" type="text" id="text_entry"></input>
+					<input class="btn btn-primary" type="button" value="追加 >>" id="btn_entry"></input>
+				</div>
+			</div>
+	
+			<div class="inputs">
+				<!--
+				<div>
+					<span id="alter_count">0</span>
+				</div>
+				-->
+				<div class="inputs">
+					<select id="sel_entry" size="10" multiple="multiple"></select>
+				</div>
+				<div class="inputs">
+					<input class="btn btn-danger" type="button" value="削除" id="btn_remove"></input><br>
+					<input class="btn btn-default" type="button" value="クリア" id="btn_clear"></input>
+				</div>
+			</div>
+
+			<div class="make">
+				<br /><!-- ここもbr以外の方法でレイアウトしたい -->
+				<input class="btn btn-primary" type="button" value="作成" id="btn_make"></input>
+			</div>
+
+			<div id="usage">
+				<div>【使い方】</div>
+				<ol>
+				<li>
+				<div>「ゴール選択肢」下のボックス内に「当たり」「はずれ」などの単語を入力し，選択肢の数だけ追加ボタンを押す。</div>
+				<div>(例：当たり２本，はずれ３本の場合…当たりと入力し，追加を２回クリック→はずれと入力し，追加を３回クリック)</div>
+				<div class="note">※ゴール選択肢を作成途中で修正したい場合は，その選択肢を選んだ状態で，「削除」ボタンをクリックする。</div>
+				<div class="note">※全部消去する場合は「クリア」ボタンを使う。</div>
+				</li>
+				<li>
+					<div>「作成」ボタンを押すと，あみだくじが作成される。</div>
+				</li>
+				<li>
+				<div>作成されたあみだくじのボックス部分に各自の名前を入れて，「Go」ボタンをクリックすると結果が表示される。</div>
+				</li>
+				</ol>	
+			</div>
+		</div><!-- /col col-md-6 -->
+
+		<div class="col col-md-offset-7">
+			<div id="amida_screen">
+				<table id="amida_table">
+					<thead id="amida_head"></thead>
+					<tbody id="amida_body"></tbody>
+					<tfoot id="amida_foot"></tfoot>
+				</table>
+			</div>
+		</div><!-- /col col-md-6 -->
+
+	</div><!-- /row -->
+
+	<div class="row">
+		<div class="col col-md-offset-8">
+			<!-- フッター -->
+			<h2>by HarmKia</h2>
+		</div>
+	</div><!-- /row -->
+
+</div><!-- /container -->
+
+</body>
+</html>

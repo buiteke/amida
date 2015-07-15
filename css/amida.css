@@ -17,7 +17,8 @@
 }
 
 #text_entry {
-	width: 10em;
+	/*width: 10em;*/
+	width: 16em;
 }
 
 #btn_entry {
@@ -35,7 +36,8 @@
 
 .make {
 	display: block;
-	margin: 10px 5px;
+	/*margin: 10px 5px;*/
+	margin: 30px 5px;
 	clear: both;
 }
 
@@ -77,12 +79,12 @@ td {
 
 td.pole {
 	/* border-left: 1px solid black; */
-	border-left: 2px solid black;
+	border-left: 3px solid black;
 }
 
 td.bordered {
 	/* border-bottom: 1px solid black; */
-	border-bottom: 2px solid black;
+	border-bottom: 3px solid black;
 }
 
 td.rooting_l {
@@ -102,7 +104,8 @@ td.rooting_b {
 }
 
 .player {
-	width: 60px;
+	/*width: 60px;*/
+	width: 80px;
 }
 
 #amida_foot th {
@@ -112,7 +115,8 @@ td.rooting_b {
 }
 
 #usage {
-	width: 600px;
+	/*width: 600px;*/
+	width: 500px;
 	margin-left: 40px;
 	padding: 1em;
 	font-size: 10pt;

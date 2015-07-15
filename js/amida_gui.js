@@ -34,7 +34,7 @@ $(function(){
 	var append_option = function(text){
 		var opt = $("<option>" + text + "</option>")
 		$("#sel_entry").append(opt);
-		refresh_count();
+		//refresh_count();
 	};
 
 	$("#btn_remove").click(function(){
@@ -44,17 +44,19 @@ $(function(){
 				opts[i].remove();
 			}
 		}
-		refresh_count();
+		//refresh_count();
 	});
 
 	$("#btn_clear").click(function(){
 		$("#sel_entry").html("");
-		refresh_count();
+		//refresh_count();
 	});
 
+	/*
 	var refresh_count = function(){
 		$("#alter_count").html($("#sel_entry > option").length);
 	};
+	*/
 
 	/**
 	 * Make
@@ -129,7 +131,8 @@ $(function(){
 		for ( var c = 0; c < num; ++c ){
 			tr += '<th>';
 			tr += '<input type="text" class="player"/>';
-			tr += '<div><input type="button" value="Go" idnum="' + c + '" /></div>';
+			//tr += '<div><input type="button" value="Go" idnum="' + c + '" /></div>';
+			tr += '<div><input class="btn btn-default" type="button" value="Go" idnum="' + c + '" /></div>';
 			tr += '</th>';
 		}
 		tr += '</tr>';
